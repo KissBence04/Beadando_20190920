@@ -25,6 +25,8 @@ namespace Feladat_1
             }
             int max= lista.Max();
             Console.WriteLine("A legnagyobb elem a listában: "+max);
+            int min = lista.Min();
+            Console.WriteLine("A legkisebb elem a listában: " + min);
             Console.ReadKey();
 
         }
