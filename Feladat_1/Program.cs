@@ -14,14 +14,17 @@ namespace Feladat_1
         {
             lista = new List<int>();
             int szam;
-            for (int i = 0; i < 10; i++)
+            int db = 0;
+            Console.WriteLine("Adja meg hány számot szeretne megadni!");
+            db= Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i < db; i++)
             {
                 Console.WriteLine("Kérek adjon meg egy számot!");
                 szam = Convert.ToInt32(Console.ReadLine());
                 lista.Add(szam);
             }
             int max= lista.Max();
-            Console.WriteLine("A legnagyobb elem a listában."+max);
+            Console.WriteLine("A legnagyobb elem a listában: "+max);
             Console.ReadKey();
 
         }
