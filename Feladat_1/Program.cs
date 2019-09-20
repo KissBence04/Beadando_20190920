@@ -15,18 +15,25 @@ namespace Feladat_1
             lista = new List<int>();
             int szam;
             int db = 0;
-            Console.WriteLine("Adja meg hány számot szeretne megadni!");
-            db= Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i < db; i++)
+            try
             {
-                Console.WriteLine("Kérek adjon meg egy számot!");
-                szam = Convert.ToInt32(Console.ReadLine());
-                lista.Add(szam);
+                Console.WriteLine("Adja meg hány számot szeretne megadni!");
+                db = Convert.ToInt32(Console.ReadLine());
+                for (int i = 0; i < db; i++)
+                {
+                    Console.WriteLine("Kérek adjon meg egy számot!");
+                    szam = Convert.ToInt32(Console.ReadLine());
+                    lista.Add(szam);
+                }
+                int max = lista.Max();
+                Console.WriteLine("A legnagyobb elem a listában: " + max);
+                int min = lista.Min();
+                Console.WriteLine("A legkisebb elem a listában: " + min);
             }
-            int max= lista.Max();
-            Console.WriteLine("A legnagyobb elem a listában: "+max);
-            int min = lista.Min();
-            Console.WriteLine("A legkisebb elem a listában: " + min);
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+            }
             Console.ReadKey();
 
         }
